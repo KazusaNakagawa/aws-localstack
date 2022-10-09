@@ -1,5 +1,3 @@
-## [Postman AWS SQS](https://documenter.getpostman.com/view/2631434/SWLh56pX)
-
 ## Introduction
 
 Leave a note on how to use Postman to manipulate SQS.

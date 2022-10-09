@@ -6,4 +6,4 @@
    ```
    
 ## Docs
-  * docs/README_SQS.md: localstack AWS SQS
+  * `docs/README_SQS.md`: localstack AWS SQS
