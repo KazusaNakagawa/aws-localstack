@@ -1,0 +1,29 @@
+# Ref: https://dev.classmethod.jp/articles/docker-compose-localstack-aws-sdk-for-javascript-v3-local/
+version: "3.9"
+
+services:
+  aws-container:
+    build: .
+    container_name: aws-container
+    privileged: true
+    restart: always
+    volumes:
+      - type: bind
+        source: ./share
+        target: /share
+      - type: bind
+        source: ~/.aws
+        target: /home/ec2-user/.aws
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
+    image: localstack/localstack
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    env_file:
+      - .env
+    volumes:
+      - "./share/localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
