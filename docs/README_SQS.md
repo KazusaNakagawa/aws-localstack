@@ -20,7 +20,7 @@ The advantage is that you don't have to repeatedly hit curl commands or aws CLI 
 
 3. Send queue message
     ```bash
-    $ awslocal sqs send-message --queue-url http://localhost:4566/00000000000/test-queue --message-body test
+    $ awslocal sqs send-message --queue-url http://localhost:4566/000000000000/test-queue --message-body tes
     {
         "MD5OfMessageBody": "098f6bcd4621d373cade4e832627b4f6",
         "MessageId": "9000f162-54b9-4b66-af7f-c69c51db959b"
@@ -29,7 +29,7 @@ The advantage is that you don't have to repeatedly hit curl commands or aws CLI 
 
 4. Receive queue message
     ```bash
-    $ awslocal sqs receive-message --queue-url http://localhost:4566/00000000000/test-queue
+    $ awslocal sqs receive-message --queue-url http://localhost:4566/000000000000/test-queue
     {
         "Messages": [
             {
