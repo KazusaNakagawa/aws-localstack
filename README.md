@@ -14,6 +14,7 @@
 ## Docs
 
 - `docs/README_SQS.md`: localstack AWS SQS
+- [【AWS】localstack で AWS SQS を local 操作する](https://zenn.dev/kazusa_nakagawa/articles/article8_aws_localstack)
 
 ## Reference
 
